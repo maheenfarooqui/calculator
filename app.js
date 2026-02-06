@@ -24,19 +24,21 @@ function calculate() {
   var num1 = Number(num3);
   var num2 = Number(num4);
   document.getElementById("input").value = "";
+  var result ;
   if (ope === "+") {
-    document.getElementById("input").value = num1 + num2;
+   result = num1 + num2;
   } else if (ope === "-") {
-    document.getElementById("input").value = num1 - num2;
+   result = num1 - num2;
   } else if (ope === "/") {
-    document.getElementById("input").value = num1 / num2;
+    result= num1 / num2;
   } else if (ope === "%") {
-    document.getElementById("input").value = num1 % num2;
+    result= num1 % num2;
   } else if (ope === "x") {
-    document.getElementById("input").value = num1 * num2;
+    result= num1 * num2;
   } else {
-    document.getElementById("input").value = "enetre correct number";
+    result= "enetre correct number";
   }
+   document.getElementById("input").value = result;
 }
 function clearInput() {
   document.getElementById("input").value = "";
