@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <input type="text" readonly id="input" />
+        <div class="innerBox">
+          <div class="round zero" onclick="clearInput()"><p>AC</p></div>
+
+          <div class="round" onclick="writeOnly('%')">
+            <p><i class="fa-solid fa-percent"></i></p>
+          </div>
+          <div class="round color" onclick="writeOnly('/')">
+            <p><i class="fa-solid fa-divide"></i></p>
+          </div>
+        </div>
+        <div class="innerBox">
+          <div class="round" onclick="writeOnly(7)"><p>7</p></div>
+          <div class="round" onclick="writeOnly(8)"><p>8</p></div>
+          <div class="round" onclick="writeOnly(9)"><p>9</p></div>
+          <div class="round color" onclick="writeOnly('x')">
+            <p><i class="fa-solid fa-xmark"></i></p>
+          </div>
+        </div>
+        <div class="innerBox">
+          <div class="round" onclick="writeOnly(4)"><p>4</p></div>
+          <div class="round" onclick="writeOnly(5)"><p>5</p></div>
+          <div class="round" onclick="writeOnly(6)"><p>6</p></div>
+          <div class="round color" onclick="writeOnly('-')">
+            <p><i class="fa-solid fa-minus"></i></p>
+          </div>
+        </div>
+        <div class="innerBox">
+          <div class="round" onclick="writeOnly(1)"><p>1</p></div>
+          <div class="round" onclick="writeOnly(2)"><p>2</p></div>
+          <div class="round" onclick="writeOnly(3)"><p>3</p></div>
+          <div class="round color" onclick="writeOnly('+')">
+            <p><i class="fa-solid fa-plus"></i></p>
+          </div>
+        </div>
+        <div class="innerBox">
+          <div class="round zero" onclick="writeOnly(0)"><p>0</p></div>
+          <div class="round" onclick="writeOnly('.')"><p>.</p></div>
+          <div class="round color" onclick="calculate()">
+            <p><i class="fa-solid fa-equals"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
