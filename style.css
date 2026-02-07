@@ -23,7 +23,7 @@ body{
     height: 80px;
     width: 230px;
     font-size: 40px;
-    color: #D4D4D2;
+    color:#D4D4D2;
  
     text-align: right;
 }
@@ -33,7 +33,7 @@ body{
 }
 .round{
     margin-top: 10px;
-    background-color:#D4D4D2 ;
+    background-color:#505050 ;
     height: 50px;
     width: 50px;
     font-weight: bold;
@@ -54,8 +54,13 @@ body{
 }
 .color{
     background-color: #FF9500;
+    color:#D4D4D2;
 }
 .color:hover{
+    background-color: #D4D4D2;
+    color: #17181A;
+}
+.clear{
     background-color: #D4D4D2;
     color: #17181A;
 }
@@ -66,6 +71,8 @@ body{
 button{
     border: none;
     outline: none;
+    color: #D4D4D2;
+    
 }
 button:hover{
     border: 1px solid #17181A;

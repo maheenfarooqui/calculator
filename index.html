@@ -18,14 +18,14 @@
       <div class="box">
         <input type="text" readonly id="input" placeholder="0" />
         <div class="innerBox">
-          <button class="round zero" onclick="clearInput()">AC</button>
+          <button class="round zero clear" onclick="clearInput()">AC</button>
 
-          <button class="round" onclick="writeOnly('%')">
+          <button class="round clear" onclick="writeOnly('%')">
             <i class="fa-solid fa-percent"></i>
           </button>
-          <div class="round color" onclick="writeOnly('/')">
-            <p><i class="fa-solid fa-divide"></i></p>
-          </div>
+          <button class="round color" onclick="writeOnly('/')">
+            <i class="fa-solid fa-divide"></i>
+          </button>
         </div>
         <div class="innerBox">
           <button class="round" onclick="writeOnly(7)">7</button>
