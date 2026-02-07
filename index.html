@@ -18,45 +18,45 @@
       <div class="box">
         <input type="text" readonly id="input" placeholder="0" />
         <div class="innerBox">
-          <div class="round zero" onclick="clearInput()"><p>AC</p></div>
+          <button class="round zero" onclick="clearInput()">AC</button>
 
-          <div class="round" onclick="writeOnly('%')">
-            <p><i class="fa-solid fa-percent"></i></p>
-          </div>
+          <button class="round" onclick="writeOnly('%')">
+            <i class="fa-solid fa-percent"></i>
+          </button>
           <div class="round color" onclick="writeOnly('/')">
             <p><i class="fa-solid fa-divide"></i></p>
           </div>
         </div>
         <div class="innerBox">
-          <div class="round" onclick="writeOnly(7)"><p>7</p></div>
-          <div class="round" onclick="writeOnly(8)"><p>8</p></div>
-          <div class="round" onclick="writeOnly(9)"><p>9</p></div>
-          <div class="round color" onclick="writeOnly('x')">
-            <p><i class="fa-solid fa-xmark"></i></p>
-          </div>
+          <button class="round" onclick="writeOnly(7)">7</button>
+          <button class="round" onclick="writeOnly(8)">8</button>
+          <button class="round" onclick="writeOnly(9)">9</button>
+          <button class="round color" onclick="writeOnly('x')">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
         <div class="innerBox">
-          <div class="round" onclick="writeOnly(4)"><p>4</p></div>
-          <div class="round" onclick="writeOnly(5)"><p>5</p></div>
-          <div class="round" onclick="writeOnly(6)"><p>6</p></div>
-          <div class="round color" onclick="writeOnly('-')">
-            <p><i class="fa-solid fa-minus"></i></p>
-          </div>
+          <button class="round" onclick="writeOnly(4)">4</button>
+          <button class="round" onclick="writeOnly(5)">5</button>
+          <button class="round" onclick="writeOnly(6)">6</button>
+          <button class="round color" onclick="writeOnly('-')">
+            <i class="fa-solid fa-minus"></i>
+          </button>
         </div>
         <div class="innerBox">
-          <div class="round" onclick="writeOnly(1)"><p>1</p></div>
-          <div class="round" onclick="writeOnly(2)"><p>2</p></div>
-          <div class="round" onclick="writeOnly(3)"><p>3</p></div>
-          <div class="round color" onclick="writeOnly('+')">
-            <p><i class="fa-solid fa-plus"></i></p>
-          </div>
+          <button class="round" onclick="writeOnly(1)">1</button>
+          <button class="round" onclick="writeOnly(2)">2</button>
+          <button class="round" onclick="writeOnly(3)">3</button>
+          <button class="round color" onclick="writeOnly('+')">
+            <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
         <div class="innerBox">
-          <div class="round zero" onclick="writeOnly(0)"><p>0</p></div>
-          <div class="round" onclick="writeOnly('.')"><p>.</p></div>
-          <div class="round color" onclick="calculate()">
-            <p><i class="fa-solid fa-equals"></i></p>
-          </div>
+          <button class="round zero" onclick="writeOnly(0)">0</button>
+          <button class="round" onclick="writeOnly('.')">.</button>
+          <button class="round color" onclick="calculate()">
+            <i class="fa-solid fa-equals"></i>
+          </button>
         </div>
       </div>
     </div>

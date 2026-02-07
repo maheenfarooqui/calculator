@@ -63,7 +63,10 @@ body{
     width: 110px;
     border-radius: 30px;
 }
-/* #17181A black
-#FF9500 orANGE
-#D4D4D2 white
-#666767 grey */
+button{
+    border: none;
+    outline: none;
+}
+button:hover{
+    border: 1px solid #17181A;
+}
