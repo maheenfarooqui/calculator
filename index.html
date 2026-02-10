@@ -18,7 +18,8 @@
       <div class="box">
         <input type="text" readonly id="input" placeholder="0" />
         <div class="innerBox">
-          <button class="round zero clear" onclick="clearInput()">AC</button>
+          <button class="round clear" onclick="clearInput()">AC</button>
+          <button class="round clear" onclick="dleteCha()">DL</button>
 
           <button class="round clear" onclick="writeOnly('%')">
             <i class="fa-solid fa-percent"></i>
@@ -52,7 +53,8 @@
           </button>
         </div>
         <div class="innerBox">
-          <button class="round zero" onclick="writeOnly(0)">0</button>
+          <button class="round" onclick="writeOnly(0)">0</button>
+          <button class="round" onclick="writeOnly('00')">00</button>
           <button class="round" onclick="writeOnly('.')">.</button>
           <button class="round color" onclick="calculate()">
             <i class="fa-solid fa-equals"></i>
