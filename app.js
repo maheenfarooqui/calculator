@@ -1,57 +1,66 @@
-function writeOnly(cha) {
-  document.getElementById("input").value += cha;
+var display = document.getElementById("input");
+var numbers = [];
+var operators = [];
+var liveNum = "";
+
+function numOnly(num) {
+  display.value += num;
+  liveNum += num;
+}
+
+function opeOnly(op) {
+  if (liveNum === "") return;
+
+  numbers.push(Number(liveNum));
+  operators.push(op);
+
+  display.value += op;
+  liveNum = "";
 }
 
 function calculate() {
-  var word = document.getElementById("input").value;
-  var ope = [];
-  var num = [];
-  var num1 = "";
-  for (var i = 0; i < word.length; i++) {
-    var symbol = word[i];
-    if (
-      symbol === "x" ||
-      symbol === "+" ||
-      symbol === "-" ||
-      symbol === "/" ||
-      symbol === "%"
-    ) {
-      num.push(num1);
-      ope.push(symbol);
-      num1 = "";
-    } else {
-      num1 += symbol;
-    }
+  if (liveNum !== "") {
+    numbers.push(Number(liveNum));
   }
-  num.push(num1);
-  document.getElementById("input").value = "";
-  var result = Number(num[0]);
 
-  for (var i = 0; i < ope.length; i++) {
-    var num2 = Number(num[i + 1]);
-    //
-    if (ope[i] === "+") {
-      result += num2;
-    } else if (ope[i] === "-") {
-      result -= num2;
-    } else if (ope[i] === "/") {
-      result /= num2;
-    } else if (ope[i] === "%") {
-      result %= num2;
-    } else if (ope[i] === "x") {
-      result *= num2;
-    } else {
-      result = "enetre correct number";
+  var result = numbers[0];
+
+  for (var i = 0; i < operators.length; i++) {
+    var nextNum = numbers[i + 1];
+
+    if (operators[i] === "+") {
+      result += nextNum;
+    } else if (operators[i] === "-") {
+      result -= nextNum;
+    } else if (operators[i] === "x") {
+      result *= nextNum;
+    } else if (operators[i] === "/") {
+      if (nextNum === 0) {
+        display.value = "Error";
+        return;
+      }
+
+      result /= nextNum;
+    } else if (operators[i] === "%") {
+      result %= nextNum;
     }
-    document.getElementById("input").value = result;
   }
+
+  display.value = result;
+
+  numbers = [];
+  operators = [];
+  liveNum = "";
 }
+
 function clearInput() {
-  document.getElementById("input").value = "";
+  display.value = "";
+  numbers = [];
+  operators = [];
+  liveNum = "";
 }
+
 function dleteCha() {
-  var dWord = document.getElementById("input").value;
-  var dletWord = dWord.length;
-  var finalWord = dWord.slice(0, dletWord - 1);
-  document.getElementById("input").value = finalWord;
+  display.value = display.value.slice(0, -1);
+  liveNum = liveNum.slice(0, -1);
 }
