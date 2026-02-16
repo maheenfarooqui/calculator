@@ -47,10 +47,10 @@ function calculate() {
   }
 
   display.value = result;
+  liveNum = result.toString();
 
   numbers = [];
   operators = [];
-  liveNum = "";
 }
 
 function clearInput() {
